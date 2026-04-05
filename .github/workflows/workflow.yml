@@ -26,8 +26,7 @@ jobs:
 
     # 🔍 LINT
     - name: Run ESLint
-      run: npx --no-install eslint .
-
+      run: node ./node_modules/eslint/bin/eslint.js .
     # 🧪 TEST
     - name: Run Jest Test
       run: npm test
