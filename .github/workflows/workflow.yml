@@ -17,10 +17,14 @@ jobs:
       with:
         node-version: '18'
 
-    # 🔍 LINT (WAJIB)
+    # 🔥 WAJIB ADA (INI YANG KURANG)
+    - name: Install dependencies
+      run: npm install
+
+    # 🔍 LINT
     - name: Run ESLint
       run: npx eslint .
 
-    # 🧪 UNIT TEST (WAJIB)
+    # 🧪 TEST
     - name: Run Jest Test
       run: npm test
