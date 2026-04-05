@@ -19,11 +19,14 @@ jobs:
 
     # 🔥 WAJIB ADA (INI YANG KURANG)
     - name: Install dependencies
-      run: npm install
+      run: npm ci
+
+    - name: Fix permissions
+      run: chmod +x ./node_modules/.bin/eslint
 
     # 🔍 LINT
     - name: Run ESLint
-      run: npx eslint .
+      run: npx --no-install eslint .
 
     # 🧪 TEST
     - name: Run Jest Test
